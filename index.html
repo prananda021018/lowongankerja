@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal Karir - Tamaro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 font-sans antialiased">
+
+  <!-- Header -->
+  <header class="bg-white shadow fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <div class="flex items-center space-x-3">
+ 
+        <span class="text-2xl font-bold text-gray-800">Tamaro</span>
+      </div>
+      <nav class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
+        <a href="#" class="hover:text-blue-600">Beranda</a>
+        <a href="#lowongan" class="hover:text-blue-600">Lowongan</a>
+        <a href="#form" class="hover:text-blue-600">Form Lamaran</a>
+        <a href="#kontak" class="hover:text-blue-600">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white pt-32 pb-20 text-center">
+    <div class="flex flex-col items-center">
+      <h1 class="text-5xl font-extrabold mb-4">Portal Karir Tamaro</h1>
+      <p class="text-lg text-blue-100 max-w-2xl mx-auto mb-8">
+        Kami mencari talenta terbaik untuk bergabung bersama <b>Tavmaro</b>.  
+        Temukan posisi yang sesuai dan kirimkan lamaran Anda sekarang.
+      </p>
+      <a href="https://otieu.com/4/9856682/landing" class="...">Lihat Lowongan Tersedia</a>
+      </a>
+    </div>
+  </section>
+
+  <!-- Lowongan Kerja -->
+  <section id="lowongan" class="py-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-gray-800 mb-10 text-center">Lowongan Tersedia</h2>
+      <div class="grid gap-8 md:grid-cols-3">
+        
+        <!-- Card 1 -->
+        <div class="bg-white shadow-md rounded-xl p-6 hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Software Engineer</h3>
+          <p class="text-gray-600 mb-4">Membangun aplikasi web & sistem backend modern dengan tim teknologi kami.</p>
+          <a href="https://otieu.com/4/9669981/?job=SoftwareEngineer" target="_blank" class="...">Lamar Sekarang </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white shadow-md rounded-xl p-6 hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">UI/UX Designer</h3>
+          <p class="text-gray-600 mb-4">Mendesain antarmuka dan pengalaman pengguna yang elegan & profesional.</p>
+          <a href="#form" onclick="isiPosisi('UI/UX Designer')" class="text-blue-600 font-medium hover:underline">Lamar Sekarang </a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white shadow-md rounded-xl p-6 hover:shadow-xl transition">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Digital Marketing Specialist</h3>
+          <p class="text-gray-600 mb-4">Mengelola strategi pemasaran digital untuk memperkuat brand Tamaro.</p>
+          <a href="#form" onclick="isiPosisi('Digital Marketing Specialist')" class="text-blue-600 font-medium hover:underline">Lamar Sekarang </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Lamaran -->
+  <section id="form" class="py-16">
+    <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-xl p-10">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Formulir Lamaran Kerja</h2>
+
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST"> enctype="multipart/form-data" class="space-y-6">
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Nama Lengkap</label>
+          <input type="text" name="nama" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+          <input type="email" name="email" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Nomor Telepon</label>
+          <input type="text" name="telepon" required class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Posisi yang Dilamar</label>
+          <input id="posisi" type="text" name="posisi" required placeholder="Contoh: Software Engineer" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Pesan / Cover Letter</label>
+          <textarea name="pesan" rows="5" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"></textarea>
+        </div>
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-1">Upload CV</label>
+          <input type="file" name="cv" accept=".pdf,.doc,.docx" class="w-full p-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none">
+        </div>
+        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-200">
+          Kirim Lamaran
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  	<a href="https://https://otieu.com/4/9669981" target="_blank" class="text-blue-600">Daftar via portal resmi kami</a>
+  <section id="kontak" class="max-w-6xl mx-auto py-16 px-6 text-center">
+    <h3 class="text-2xl font-bold text-gray-800 mb-4">Kontak Kami</h3>
+    <p class="text-gray-600">Email: <a href="mailto:tamaro.gok.a@gmail.com" class="text-blue-600">tamaro.gok.a@gmail.com</a></p>
+    <p class="text-gray-600">Telepon: (021) 82615567</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 text-center py-6 text-sm">
+    © 2002 Tamaro Gok Asi. Semua Hak Dilindungi.
+  </footer>
+
+  <!-- Script untuk isi posisi otomatis -->
+  <script>
+    function isiPosisi(posisi) {
+      document.getElementById("posisi").value = posisi;
+    }
+  </script>
+
+</body>
+</html>
